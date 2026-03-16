@@ -1,41 +1,22 @@
-# Canonical's Sphinx Starter Pack
+# Charmed Ingress Documentation
 
-*A pre-configured repository to build and publish documentation with Sphinx.*
+Documentation for Canonical's charmed ingress solutions, covering traffic routing, ingress charm selection, and interface guidance for both machine and Kubernetes substrates.
 
-## Description
+## Building the docs
 
-The Documentation starter pack includes:
+To build and preview the documentation locally:
 
-* A bundled [Sphinx] theme, configuration, and extensions
-* Support for both reStructuredText (reST) and MyST Markdown
-* Build checks for links, spelling, and inclusive language
-* Customisation support layered over a core configuration
+```bash
+cd docs
+make run
+```
 
-See the full documentation: https://canonical-starter-pack.readthedocs-hosted.com/
-
-## Structure
-
-This section outlines the structure of this repository, and some key files.
-
-### `docs/`
-
-This directory contains the documentation for the starter pack itself.
-
-To view it in your browser, navigate to this directory and type `make run`.
-
-### `.github/workflows/`
-
-This directory contains files used for documentation build checks via GitHub's CI.
-
-The file `test-starter-pack.yml` tests the functionality of the starter pack project.
+This will build the documentation and serve it at `http://127.0.0.1:8000`.
 
 ## Contributing
 
-We welcome contributions to this project! If you have suggestions, bug fixes, or improvements, please open an issue or submit a pull request.
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this documentation.
 
-Please read and sign our [Contributor Licence Agreement (CLA)] before submitting any changes. The agreement grants Canonical permission to use your contributions. The author of a change remains the copyright owner of their code (no copyright assignment occurs).
+## License
 
-<!--Links-->
-
-[Sphinx]: https://www.sphinx-doc.org/
-[Contributor Licence Agreement (CLA)]: https://ubuntu.com/legal/contributors
+This project is licensed under [GPL-3.0](LICENSE).

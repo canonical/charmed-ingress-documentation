@@ -1,50 +1,36 @@
-Documentation starter pack
+Charmed ingress
 ==========================
 
-The documentation starter pack helps you to quickly set up, build, and publish
-documentation with Sphinx.
+Applications today rarely run in isolation. They need to be reachable by users, other services, or external systems, and they often need control over how traffic enters the deployment.
 
-It contains common styling and configuration through the `Canonical Sphinx`_ extension,
-supports both |RST| and Markdown, and includes automatic documentation checks.
+Charmed ingress solutions provide the traffic layer that makes this possible. They sit at the boundary of your deployment and manage how requests are routed to workloads.
 
+They allow you to:
 
-In this documentation
----------------------
+* Expose your applications outside their network boundary
+* Control inbound traffic
+* Add routing, security and caching layers
+* Standardize access across machine and Kubernetes environments
 
-.. grid:: 1 1 2 2
+If your charm workload needs to be reachable from the public internet, a virtual network, or other applications, you will likely need an ingress charm as part of your deployment.
 
-    .. grid-item-card:: Tutorial
-        :link: /tutorial/index
-        :link-type: doc
+There is no single ingress solution that fits every scenario. The right ingress solution depends on several factors, including:
 
-        **Get started** - use Sphinx and Read the Docs to host and test your documentation.
+* Substrate (machine vs Kubernetes)
+* Traffic layer (Layer 4 or Layer 7)
+* Complexity of ingress requirements
+* Security requirements
+* TLS termination
 
-    .. grid-item-card:: How-to guides
-        :link: /how-to/index
-        :link-type: doc
+To find the right ingress solution for your use case, see :doc:`how-to/choose-an-ingress`.
 
-        **Step-by-step guides** - learn key operations and customisation.
+Have questions?
+----------------
 
-.. grid:: 1 1 2 2
-
-    .. grid-item-card:: Reference
-        :link: /reference/index
-        :link-type: doc
-
-        **Technical information** - review the automatic checks and Sphinx capabilities.
-
-    .. grid-item-card:: Explanation
-        :link: /explanation/index
-        :link-type: doc
-
-        **Concepts** - understand the design and architecture of the starter pack.
+Reach out to us on the `Charm Development <https://matrix.to/#/#charmhub-charmdev:ubuntu.com>`_ channel.
 
 .. toctree::
-    :hidden:
-    :maxdepth: 2
+   :hidden:
 
-    Tutorials <tutorial/index>
-    How-to guides <how-to/index>
-    Reference <reference/index>
-    Explanation <explanation/index>
-    Release notes <release-notes/index>
+   how-to/choose-an-ingress
+   how-to/contribute
