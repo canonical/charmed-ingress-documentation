@@ -1,3 +1,8 @@
+.. meta::
+    :description: Learn how to identify which charmed ingress solution matches your needs and use case. 
+
+.. _how_to_choose_an_ingress:
+
 Choose the right ingress
 ========================
 

@@ -1,5 +1,8 @@
+.. meta::
+    :description: An overview of Canonical's charmed ingress solutions to help you choose the best routing option for your needs and use case. 
+
 Charmed ingress
-==========================
+===============
 
 Applications today rarely run in isolation. They need to be reachable by users, other services, or external systems, and they often need control over how traffic enters the deployment.
 

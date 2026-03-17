@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Learn how to contribute to the Charmed Ingresses documentation."
+---
+
 (how_to_contribute)=
 
 # How to contribute
