@@ -24,7 +24,7 @@ import yaml
 #
 # TODO: Update with the official name of your project or product
 
-project = "Documentation starter pack"
+project = "Charmed ingress"
 author = "Canonical Ltd."
 
 
@@ -70,7 +70,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://canonical-starter-pack.readthedocs-hosted.com/"
+ogp_site_url = "https://documentation.ubuntu.com/charmed-ingresses/"
 
 
 # Preview name of the documentation website
@@ -106,7 +106,7 @@ html_context = {
     # TODO: If there's no such website,
     #       remove the {{ product_page }} link from the page header template
     #       (usually .sphinx/_templates/header.html; also, see README.rst).
-    "product_page": "documentation.ubuntu.com",
+    "product_page": "https://charmhub.io/",
     # Product tag image; the orange part of your logo, shown in the page header
     #
     # TODO: To add a tag image, uncomment and update as needed.
@@ -117,22 +117,22 @@ html_context = {
     #
     # NOTE: If set, adding ':discourse: 123' to an .rst file
     #       will add a link to Discourse topic 123 at the bottom of the page.
-    "discourse": "https://discourse.ubuntu.com",
+    "discourse": "https://discourse.charmhub.io",
     # Your Mattermost channel URL
     #
     # TODO: Change to your Mattermost channel URL or leave empty.
-    "mattermost": "https://chat.canonical.com/canonical/channels/documentation",
+    "mattermost": "",
     # Your Matrix channel URL
     #
     # TODO: Change to your Matrix channel URL or leave empty.
-    "matrix": "https://matrix.to/#/#documentation:ubuntu.com",
+    "matrix": "https://matrix.to/#/#charmhub-charmdev:ubuntu.com",
     # Your documentation GitHub repository URL
     #
     # TODO: Change to your documentation GitHub repository URL or leave empty.
     #
     # NOTE: If set, links for viewing the documentation source files
     #       and creating GitHub issues are added at the bottom of each page.
-    "github_url": "https://github.com/canonical/sphinx-docs-starter-pack",
+    "github_url": "https://github.com/canonical/charmed-ingress-documentation",
     # Docs branch in the repo; used in links for viewing the source files
     #
     # TODO: To customise the branch, uncomment and update as needed.
@@ -167,9 +167,9 @@ if os.getenv("OPENAPI", ""):
 # - https://launchpad.net/example
 # - https://git.launchpad.net/example
 #
-# html_theme_options = {
-# 'source_edit_link': 'https://github.com/canonical/sphinx-docs-starter-pack',
-# }
+html_theme_options = {
+'source_edit_link': 'https://github.com/canonical/charmed-ingress-documentation',
+}
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
 #
@@ -209,8 +209,8 @@ sitemap_excludes = [
 # Template and asset locations
 #######################
 
-#html_static_path = ["_static"]
-#templates_path = ["_templates"]
+# html_static_path = ["_static"]
+templates_path = ["_templates"]
 
 
 #############
@@ -226,13 +226,7 @@ sitemap_excludes = [
 # NOTE: If undefined, set to None, or empty,
 #       the sphinx_reredirects extension will be disabled.
 
-redirects = {
-    'reference/doc-cheat-sheet-myst/': '../myst-syntax-reference',
-    'reference/doc-cheat-sheet/': '../rst-syntax-reference',
-    'reference/style-guide-myst/': '../myst-syntax-reference',
-    'reference/style-guide/': '../rst-syntax-reference',
-    'how-to/migrate-from-pre-extension': '../update-starter-packs/pre-extension/'
-}
+redirects = {}
 
 
 ###########################
@@ -241,8 +235,6 @@ redirects = {
 
 # A regex list of URLs that are ignored by 'make linkcheck'
 #
-# TODO: Remove or adjust the ACME entry after you update the contributing guide
-
 linkcheck_ignore = [
     "http://127.0.0.1:8000",
     "https://github.com",
@@ -299,13 +291,12 @@ extensions = [
     "sphinx_last_updated_by_git",
     "sphinx.ext.intersphinx",
     "sphinx_sitemap",
+    "sphinxcontrib.mermaid",
 ]
 
 # Excludes files or directories from processing
 
-exclude_patterns = [
-    "doc-cheat-sheet*",
-]
+exclude_patterns = []
 
 # Adds custom CSS files, located under 'html_static_path'
 
@@ -365,13 +356,12 @@ if "discourse_prefix" not in html_context and "discourse" in html_context:
     html_context["discourse_prefix"] = f"{html_context['discourse']}/t/"
 
 # Workaround for substitutions.yaml
-
-if os.path.exists('./reuse/substitutions.yaml'):
-    with open('./reuse/substitutions.yaml', 'r') as fd:
-        myst_substitutions = yaml.safe_load(fd.read())
+# (No reuse/substitutions.yaml in this project)
 
 # Add configuration for intersphinx mapping
 # Map only the Sphinx documentation sets that you need to link to from your docs set.
 intersphinx_mapping = {
-    'sphinxcontrib-mermaid': ('https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest', None)
+    'sphinxcontrib-mermaid': ('https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest', None),
+    'juju': ("https://documentation.ubuntu.com/juju/3.6/", None),
+    'starter-pack': ("https://canonical-starter-pack.readthedocs-hosted.com/stable/", None),
 }
