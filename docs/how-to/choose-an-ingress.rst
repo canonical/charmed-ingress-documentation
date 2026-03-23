@@ -34,9 +34,13 @@ Built on top of NGINX, these charms are suited for workloads that serve static a
 Is your workload charmed? Will your ingress requirements remain static after deployment?
 ----------------------------------------------------------------------------------------
 
-If your workload is not charmed, or if you expect ingress configuration to change over time, or if you need to configure additional ingress requirements in HAProxy that are not provided by the *ingress* interface, we recommend the `ingress-configurator <https://github.com/canonical/ingress-configurator-operator/>`_ charm. This charm:
+If your workload is not charmed, or if you expect ingress configuration to change over time, or if 
+you need to configure additional ingress requirements that are not provided by the *ingress* interface, 
+we recommend the ``*-configurator charms`` (`ingress-configurator <https://github.com/canonical/ingress-configurator-operator/>`_ charm 
+for HAProxy and `gateway-route-configurator <https://github.com/canonical/gateway-api-integrator-operator/tree/main/gateway-route-configurator/>`_ charm 
+for Gateway API). These charms:
 
-* Acts as a translation layer between applications requiring ingress and HAProxy
+* Acts as a translation layer between applications requiring ingress and the ingress charms.
 * Allows non-charmed workloads to integrate into the Juju ecosystem
 * Enables dynamic ingress configuration without redeploying infrastructure
 
