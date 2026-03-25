@@ -106,7 +106,7 @@ html_context = {
     # TODO: If there's no such website,
     #       remove the {{ product_page }} link from the page header template
     #       (usually .sphinx/_templates/header.html; also, see README.rst).
-    "product_page": "https://charmhub.io/",
+    "product_page": "charmhub.io/",
     # Product tag image; the orange part of your logo, shown in the page header
     #
     # TODO: To add a tag image, uncomment and update as needed.
@@ -151,6 +151,22 @@ html_context = {
 
     # Required for feedback button    
     'github_issues': 'enabled',
+
+    # Header navigation dropdowns
+    # Each key is a dropdown label; its value is a dict of link names to URLs.
+    # Add new categories or entries to update the header automatically.
+    "header_nav_dropdowns": {
+        "Kubernetes Ingresses": {
+            "Traefik": "https://documentation.ubuntu.com/traefik-k8s-charm/latest/",
+            "Gateway API": "https://charmhub.io/gateway-api-integrator",
+            "Nginx": "https://charmhub.io/nginx-ingress-integrator",
+            "Content Cache K8s": "https://charmhub.io/content-cache-k8s",
+        },
+        "Machine Ingresses": {
+            "HAProxy": "https://documentation.ubuntu.com/haproxy-charm/latest/",
+            "Content Cache": "https://charmhub.io/content-cache",
+        },
+    },
 }
 
 html_extra_path = []
