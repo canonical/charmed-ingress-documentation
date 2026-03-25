@@ -158,7 +158,7 @@ html_context = {
     "header_nav_dropdowns": {
         "Kubernetes Ingresses": {
             "Traefik": "https://documentation.ubuntu.com/traefik-k8s-charm/latest/",
-            "Gateway API": "https://github.com/canonical/gateway-api-integrator-operator/blob/main/docs/index.md",
+            "Gateway API": "https://charmhub.io/gateway-api-integrator",
             "Nginx": "https://charmhub.io/nginx-ingress-integrator",
             "Content Cache K8s": "https://charmhub.io/content-cache-k8s",
         },
