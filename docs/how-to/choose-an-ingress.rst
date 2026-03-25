@@ -18,6 +18,8 @@ For Kubernetes, we have the following charms available:
 * `Traefik charm <https://github.com/canonical/traefik-k8s-operator>`_
 * `Nginx ingress integrator <https://github.com/canonical/nginx-ingress-integrator-operator>`_
 
+Gateway API integrator is the recommended charm for Kubernetes. Traefik must only be used when a particular requirement is not supported by Gateway API. Nginx ingress integrator charm is currently in maintenance mode and will be deprecated in the future. 
+
 .. note::
    Nginx ingress integrator and Gateway API integrator are workload-less charms and do not install an ingress. The ingress needs to be pre-installed.
 
