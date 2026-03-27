@@ -1,6 +1,6 @@
 # Charmed Ingress Documentation
 
-Documentation for Canonical's charmed ingress solutions, covering traffic routing, ingress charm selection, and interface guidance for both machine and Kubernetes substrates.
+[Documentation](https://documentation.ubuntu.com/charmed-ingresses/latest/) for Canonical's charmed ingress solutions, covering traffic routing, ingress charm selection, and interface guidance for both machine and Kubernetes substrates.
 
 ## Building the docs
 
