@@ -1,5 +1,5 @@
 // Replace oldDomain with newDomain
-const oldDomain = 'placeholder.com';
+const oldDomain = 'canonical-ingress-proxy-charms.readthedocs-hosted.com';
 const newDomain = 'canonical.com/juju/docs/charmed-ingresses';
 
 function escapeRegExp(value) {
