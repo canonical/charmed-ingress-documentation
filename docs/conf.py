@@ -27,6 +27,9 @@ import yaml
 project = "Charmed ingress"
 author = "Canonical Ltd."
 
+# Version
+
+version = f"{os.environ.get('READTHEDOCS_VERSION', 'local')}"
 
 # Sidebar documentation title; best kept reasonably short
 #
@@ -70,7 +73,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://documentation.ubuntu.com/charmed-ingresses/"
+ogp_site_url = f"https://canonical.com/juju/docs/charmed-ingresses/{version}/"
 
 
 # Preview name of the documentation website
@@ -192,7 +195,7 @@ html_theme_options = {
 # TODO: If your documentation is hosted on https://docs.ubuntu.com/,
 #       uncomment and update as needed.
 
-# slug = ''
+slug = 'juju/docs/charmed-ingresses'
 
 #######################
 # Sitemap configuration: https://sphinx-sitemap.readthedocs.io/
@@ -200,7 +203,7 @@ html_theme_options = {
 
 # Use RTD canonical URL to ensure duplicate pages have a specific canonical URL
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+html_baseurl = f"https://canonical.com/juju/docs/charmed-ingresses/{version}/"
 
 # sphinx-sitemap uses html_baseurl to generate the full URL for each page:
 
@@ -225,7 +228,7 @@ sitemap_excludes = [
 # Template and asset locations
 #######################
 
-# html_static_path = ["_static"]
+html_static_path = ["_static"]
 templates_path = ["_templates"]
 
 
@@ -316,12 +319,15 @@ exclude_patterns = []
 
 # Adds custom CSS files, located under 'html_static_path'
 
-# html_css_files = []
+html_css_files = ["https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css"]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
 
-# html_js_files = []
+html_js_files = [
+    "https://assets.ubuntu.com/v1/287a5e8f-bundle.js",
+    "js/overwrite_links.js",
+]
 
 
 # Specifies a reST snippet to be appended to each .rst file
@@ -379,5 +385,5 @@ if "discourse_prefix" not in html_context and "discourse" in html_context:
 intersphinx_mapping = {
     'sphinxcontrib-mermaid': ('https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest', None),
     'juju': ("https://documentation.ubuntu.com/juju/3.6/", None),
-    'starter-pack': ("https://canonical-starter-pack.readthedocs-hosted.com/stable/", None),
+    'starter-pack': ("https://documentation.ubuntu.com/sphinx-stack/latest/", None),
 }
