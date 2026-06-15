@@ -27,7 +27,7 @@ On GitHub, you may open a pull request with your documentation changes, or you c
 
 For syntax help and guidelines,
 refer to the
-{ref}`Canonical MyST style guide <starter-pack:myst_style_guide>`.
+{ref}`Canonical MyST style guide <starter-pack:myst-syntax>`.
 
 To run the documentation locally before submitting your changes:
 
