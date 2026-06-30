@@ -38,9 +38,9 @@ Is your workload charmed? Will your ingress requirements remain static after dep
 
 If your workload is not charmed, or if you expect ingress configuration to change over time, or if 
 you need to configure additional ingress requirements that are not provided by the *ingress* interface, 
-we recommend the ``*-configurator charms`` (`ingress-configurator <https://github.com/canonical/ingress-configurator-operator/>`_ charm 
-for HAProxy and `gateway-route-configurator <https://github.com/canonical/gateway-api-integrator-operator/tree/main/gateway-route-configurator/>`_ charm 
-for Gateway API). These charms:
+we recommend the `ingress-configurator <https://github.com/canonical/ingress-configurator-operator/>`_ 
+charm. This charm works with HAProxy (via the ``haproxy-route`` and ``haproxy-route-tcp`` 
+interfaces) and Gateway API (via the ``gateway-route`` interface). It:
 
 * Acts as a translation layer between applications requiring ingress and the ingress charms.
 * Allows non-charmed workloads to integrate into the Juju ecosystem
@@ -66,4 +66,4 @@ The following interfaces are available to be implemented by the ingress requirer
 
 * `Ingress <https://github.com/canonical/traefik-k8s-operator/blob/main/lib/charms/traefik_k8s/v1/ingress.py>`_ - A simple controller-independent interface that provides HTTP/HTTPS routing to an application, including load balancing across all units.
 * `Ingress-per-unit <https://github.com/canonical/traefik-k8s-operator/blob/main/lib/charms/traefik_k8s/v1/ingress_per_unit.py>`_ - a simple controller-independent interface that provides an ingress URL per unit.
-* \*-route (`haproxy-route <https://github.com/canonical/haproxy-operator/blob/main/haproxy-operator/lib/charms/haproxy/v2/haproxy_route.py>`_, `gateway-route <https://github.com/canonical/gateway-api-integrator-operator/blob/main/gateway-api-integrator/lib/charms/gateway_api/v0/gateway_route.py>`_, `traefik-route <https://github.com/canonical/traefik-k8s-operator/blob/main/lib/charms/traefik_k8s/v0/traefik_route.py>`_, `nginx-route <https://github.com/canonical/nginx-ingress-integrator-operator/blob/main/lib/charms/nginx_ingress_integrator/v0/nginx_route.py>`_) - An advanced alternative to the ingress relation where workload specific configuration can be provided by the user.
+* \*-route (`haproxy-route <https://github.com/canonical/haproxy-operator/blob/main/haproxy-operator/lib/charms/haproxy/v2/haproxy_route.py>`_, `gateway-route <https://github.com/canonical/gateway-api-integrator-operator/blob/main/gateway-api-integrator/lib/charms/gateway_api_integrator/v1/gateway_route.py>`_, `traefik-route <https://github.com/canonical/traefik-k8s-operator/blob/main/lib/charms/traefik_k8s/v0/traefik_route.py>`_, `nginx-route <https://github.com/canonical/nginx-ingress-integrator-operator/blob/main/lib/charms/nginx_ingress_integrator/v0/nginx_route.py>`_) - An advanced alternative to the ingress relation where workload specific configuration can be provided by the user.
