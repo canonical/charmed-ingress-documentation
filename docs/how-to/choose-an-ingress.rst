@@ -39,8 +39,8 @@ Is your workload charmed? Will your ingress requirements remain static after dep
 If your workload is not charmed, or if you expect ingress configuration to change over time, or if 
 you need to configure additional ingress requirements that are not provided by the *ingress* interface, 
 we recommend the `ingress-configurator <https://github.com/canonical/ingress-configurator-operator/>`_ 
-charm. This charm works with HAProxy (via the ``haproxy-route`` and ``haproxy-route-tcp`` 
-interfaces) and Gateway API (via the ``gateway-route`` interface). It:
+charm. This charm works with HAProxy (using the ``haproxy-route`` and ``haproxy-route-tcp`` 
+interfaces) and Gateway API (using the ``gateway-route`` interface). It:
 
 * Acts as a translation layer between applications requiring ingress and the ingress charms.
 * Allows non-charmed workloads to integrate into the Juju ecosystem
