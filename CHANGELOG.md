@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Each revision is versioned by the date of the revision.
 
+## 2026-07-21
+
+### Added
+
+* Added "Ingress configurator" section to the RTD header navigation linking to the ingress configurator documentation.
+* Added a reference to the official ingress configurator documentation in the "Choose the right ingress" guide.
+
 ## 2026-06-18
 
 * Updated the RTD project to migrate the URL under the Canonical domain.
