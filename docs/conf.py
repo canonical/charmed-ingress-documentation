@@ -169,6 +169,9 @@ html_context = {
             "HAProxy": "https://documentation.ubuntu.com/haproxy-charm/latest/",
             "Content Cache": "https://charmhub.io/content-cache",
         },
+        "Ingress configurator": {
+            "Ingress configurator": "https://canonical.com/juju/docs/ingress-configurator-charm/latest/",
+        },
     },
 }
 

@@ -46,6 +46,8 @@ interfaces) and Gateway API (using the ``gateway-route`` interface). It:
 * Allows non-charmed workloads to integrate into the Juju ecosystem
 * Enables dynamic ingress configuration without redeploying infrastructure
 
+For more details on how to use the configurator charm, check the official `ingress configurator documentation <https://canonical.com/juju/docs/ingress-configurator-charm/latest/>`_.
+
 Is your traffic on Layer 4 or Layer 7?
 --------------------------------------
 
