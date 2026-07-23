@@ -169,9 +169,9 @@ html_context = {
             "HAProxy": "https://documentation.ubuntu.com/haproxy-charm/latest/",
             "Content Cache": "https://charmhub.io/content-cache",
         },
-        "Ingress configurator": {
-            "Ingress configurator": "https://canonical.com/juju/docs/ingress-configurator-charm/latest/",
-        },
+    },
+    "header_nav_links": {
+        "Ingress configurator": "https://canonical.com/juju/docs/ingress-configurator-charm/latest/",
     },
 }
 
@@ -324,7 +324,10 @@ exclude_patterns = []
 
 # Adds custom CSS files, located under 'html_static_path'
 
-html_css_files = ["https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css"]
+html_css_files = [
+    "https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css",
+    "css/header-nav.css",
+]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
