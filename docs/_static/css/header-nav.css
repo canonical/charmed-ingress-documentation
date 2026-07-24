@@ -1,0 +1,39 @@
+/* Header nav: keep dropdown chevrons from overlapping labels */
+#header .p-navigation__links > li {
+    position: relative;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#header .p-navigation__link.nav-more-links {
+    line-height: 1.25rem;
+    padding-right: 2.1rem !important;
+}
+
+#header .p-navigation__link.nav-more-links::after {
+    right: 0.7rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Align plain nav links (non-dropdown) vertically with dropdown triggers */
+#header .p-navigation__link:not(.nav-more-links) {
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1.25rem !important;
+    height: 100% !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Add spacing between nav items to prevent clumping */
+#header .p-navigation__links > li + li {
+    margin-left: 0.5rem !important;
+}
+
+/* Override theme widths that push chevrons into text */
+@media only screen and (min-width: 480px) {
+    #header ul.p-navigation__links > li {
+        width: auto !important;
+    }
+}

@@ -4,6 +4,7 @@ backends
 Canonical('s)?
 Charmcraft
 cjk
+configurator
 cryptographically
 dvipng
 fonts

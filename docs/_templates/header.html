@@ -74,6 +74,14 @@
       {% endfor %}
       {% endif %}
 
+      {% if header_nav_links %}
+      {% for link_label, url in header_nav_links.items() %}
+      <li>
+        <a href="{{ url }}" class="p-navigation__link">{{ link_label }}</a>
+      </li>
+      {% endfor %}
+      {% endif %}
+
     </ul>
   </div>
 </header>

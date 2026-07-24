@@ -170,6 +170,9 @@ html_context = {
             "Content Cache": "https://charmhub.io/content-cache",
         },
     },
+    "header_nav_links": {
+        "Ingress configurator": "https://canonical.com/juju/docs/ingress-configurator-charm/latest/",
+    },
 }
 
 html_extra_path = []
@@ -321,7 +324,10 @@ exclude_patterns = []
 
 # Adds custom CSS files, located under 'html_static_path'
 
-html_css_files = ["https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css"]
+html_css_files = [
+    "https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css",
+    "css/header-nav.css",
+]
 
 
 # Adds custom JavaScript files, located under 'html_static_path'
