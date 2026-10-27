@@ -1,0 +1,27 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: f83d671
+_src_path: gh:canonical/platform-engineering-documentation-files.git
+author: Canonical Ltd.
+discourse: https://discourse.charmhub.io
+display_contributors: false
+docs_host: canonical.com
+github_url: https://github.com/canonical/charmed-ingress-documentation
+html_favicon: ''
+license_name: CC-BY-SA-4.0
+license_url: https://creativecommons.org/licenses/by-sa/4.0/
+linkcheck_timeout: 30
+llms_txt_description: 'Charmed ingress documentation: Canonical''s charmed-based solutions
+    for ingress, proxy, and routing for Kubernetes and machine deployments, helping
+    you choose and operate the right solution for your use case.'
+matrix: https://matrix.to/#/#charmhub-charmdev:ubuntu.com
+mattermost: ''
+new_domain: canonical.com/juju/docs/charmed-ingresses
+ogp_image: https://assets.ubuntu.com/v1/cc828679-docs_illustration.svg
+old_domain: canonical-ingress-proxy-charms.readthedocs-hosted.com
+product_page: charmhub.io/
+product_tag: ''
+project: Charmed ingress
+repo_default_branch: main
+repo_folder: /docs/
+rtd_slug: juju/docs/charmed-ingresses
+source_edit_link: https://github.com/canonical/charmed-ingress-documentation
