@@ -293,6 +293,6 @@ rst_epilog = """
 # Intersphinx mappings for cross-referencing external documentation.
 intersphinx_mapping = {
     "sphinxcontrib-mermaid": ("https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest", None),
-    "juju": ("https://documentation.ubuntu.com/juju/3.6/", None),
+    "juju": ("https://canonical.com/juju/docs/juju-cli/3.6/", None),
     "starter-pack": ("https://documentation.ubuntu.com/sphinx-stack/latest/", None),
 }
